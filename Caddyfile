@@ -1,0 +1,7 @@
+0.0.0.0:80 {
+    root /srv/public
+    gzip
+    rewrite {path} {path}/ /index.php
+    fastcgi / 127.0.0.1:9000 php
+    on startup php-fpm7
+}

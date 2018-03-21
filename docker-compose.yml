@@ -1,0 +1,23 @@
+version: "3.0"
+
+networks:
+  app: {}
+
+volumes:
+  logs:
+    driver: local
+
+services:
+  keepstar:
+    image: abiosoft/caddy:php
+    networks:
+      - app
+    volumes:
+      - ./:/srv:rw
+      - ./Caddyfile:/etc/Caddyfile
+    ports:
+      - 8080:80/tcp
+      - 4430:443/tcp
+    working_dir: /var/www
+    environment:
+      - CADDYPATH=/etc/caddycerts
