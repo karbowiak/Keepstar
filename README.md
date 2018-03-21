@@ -25,6 +25,20 @@ Install
 -
 Read the Wiki!
 
+Docker
+-
+1. Clone the repo
+2. Copy the config.new.php to config.php
+3. Edit config.php
+4. Install/Update with composer: `composer install -o` or `composer update -o`
+5. Make sure you have docker and docker-compose installed
+6. Run `docker-compose up` in the main directory, this will build and start the container
+7. Stop the container (ctrl+c) - and then do `docker-compose start` to start it headlessly
+8. ???
+9. Celebrate
+
+This will be easier once the minor things are fixed, and Shib adds it to auto building...
+
 Future Plans
 -
 - This framework could be easily expanded into a full blown auth system (srp, fleet tools, etc..) if the interest is 
